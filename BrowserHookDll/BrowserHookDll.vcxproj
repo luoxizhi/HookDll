@@ -25,7 +25,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -75,6 +75,10 @@ copy "D:\tech demo\BrowserHookDll\Debug\BrowserHookDll.dll" "D:\tech demo\Browse
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "D:\tech demo\BrowserHookDll\BrowserHookDll\BrowserHookDll.h" "D:\tech demo\BrowserHook\BrowserHook\BrowserHookDll.h"
+copy "D:\tech demo\BrowserHookDll\Release\BrowserHookDll.dll" "D:\tech demo\BrowserHook\Release\BrowserHookDll.dll"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
