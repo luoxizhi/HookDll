@@ -1,0 +1,13 @@
+#pragma once
+
+#define BHD_CBT_ACTIVATE_MSG	("BHD_CBT_ACTIVATE_MSG")
+#define BHD_CBT_MINMAX_MSG		("BHD_CBT_MINMAX_MSG")
+#define BHD_CBT_MOVESIZE_MSG	("BHD_CBT_MOVESIZE_MSG")
+#define BHD_CBT_SETFOCUS_MSG	("BHD_CBT_SETFOCUS_MSG")
+#define BHD_CBT_SYSCOMMAND_MSG	("BHD_CBT_SYSCOMMAND_MSG")
+#define BHD_CBT_CREATEWND_MSG	("BHD_CBT_CREATEWND_MSG")
+#define BHD_CBT_DESTROYWND_MSG	("BHD_CBT_DESTROYWND_MSG")
+
+extern "C" __declspec(dllexport) BOOL InstallHook(HWND hWnd);
+extern "C" __declspec(dllexport) BOOL UnInstallHook();
+
